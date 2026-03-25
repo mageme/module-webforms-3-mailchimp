@@ -3,7 +3,7 @@
     "description": "Mailchimp integration add-on for WebForms Pro 3",
     "type": "magento2-module",
     "version": "3.0.5",
-    "license": "https://mageme.com/license/",
+    "license": "proprietary",
     "homepage": "https://mageme.com",
     "support": {
         "issues": "https://github.com/mageme/module-webforms-3-mailchimp/issues",
