@@ -2,7 +2,7 @@
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/mageme/module-webforms-3-mailchimp.svg)](https://packagist.org/packages/mageme/module-webforms-3-mailchimp)
 [![Packagist Downloads](https://img.shields.io/packagist/dt/mageme/module-webforms-3-mailchimp.svg)](https://packagist.org/packages/mageme/module-webforms-3-mailchimp)
-[![License](https://img.shields.io/packagist/l/mageme/module-webforms-3-mailchimp.svg)](https://mageme.com/license/)
+[![License: Proprietary](https://img.shields.io/badge/license-proprietary-blue.svg)](https://mageme.com/license/)
 
 Subscribe your Magento 2 customers to Mailchimp audiences through any form. This free add-on for [MageMe WebForms](https://mageme.com/magento-2-form-builder.html) adds Mailchimp subscriber management with merge field mapping, interest groups, and tag support.
 
