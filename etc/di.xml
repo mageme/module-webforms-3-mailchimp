@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="MageMe\WebForms\Model\ResourceModel\Form">
+        <plugin name="webforms_mailchimp_add_serializable_fields"
+                type="MageMe\WebFormsMailchimp\Plugin\Model\ResourceModel\Form\GetSerializableFields"
+                sortOrder="10" disabled="false"/>
+    </type>
+    <type name="MageMe\WebForms\Helper\Result\PostHelper">
+        <plugin name="webforms_mailchimp_subscribe"
+                type="MageMe\WebFormsMailchimp\Plugin\Controller\Form\Submit\SetPostResultModelData"
+                sortOrder="20" disabled="false"/>
+    </type>
+    <type name="MageMe\WebFormsMailchimp\Model\Field\Type\MailchimpGroupSelect">
+        <arguments>
+            <argument name="fieldUi" xsi:type="object">MageMe\WebFormsMailchimp\Ui\Field\Type\MailchimpGroupSelect</argument>
+            <argument name="fieldBlock" xsi:type="object">MageMe\WebFormsMailchimp\Block\Form\Element\Field\Type\MailchimpGroupSelect</argument>
+        </arguments>
+    </type>
+    <type name="MageMe\WebFormsMailchimp\Model\Field\Type\MailchimpGroupSelectRadio">
+        <arguments>
+            <argument name="fieldUi" xsi:type="object">MageMe\WebFormsMailchimp\Ui\Field\Type\MailchimpGroupSelectRadio</argument>
+            <argument name="fieldBlock" xsi:type="object">MageMe\WebFormsMailchimp\Block\Form\Element\Field\Type\MailchimpGroupSelectRadio</argument>
+        </arguments>
+    </type>
+    <type name="MageMe\WebFormsMailchimp\Model\Field\Type\MailchimpGroupSelectCheckbox">
+        <arguments>
+            <argument name="fieldUi" xsi:type="object">MageMe\WebFormsMailchimp\Ui\Field\Type\MailchimpGroupSelectCheckbox</argument>
+            <argument name="fieldBlock" xsi:type="object">MageMe\WebFormsMailchimp\Block\Form\Element\Field\Type\MailchimpGroupSelectCheckbox</argument>
+        </arguments>
+    </type>
+</config>

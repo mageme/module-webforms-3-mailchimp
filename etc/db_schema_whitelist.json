@@ -1,0 +1,10 @@
+{
+    "mm_webforms_form": {
+        "column": {
+            "is_mailchimp_enabled": true,
+            "mailchimp_email_field_id": true,
+            "mailchimp_map_fields_serialized": true,
+            "mailchimp_tags_serialized": true
+        }
+    }
+}

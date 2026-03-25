@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<listing>
+    <listingToolbar name="listing_top">
+        <massaction name="listing_massaction">
+            <action name="mailchimp"
+                    class="MageMe\WebFormsMailchimp\Ui\Component\Result\Listing\MassActions\SubActions\Mailchimp">
+                <settings>
+                    <type>mailchimp</type>
+                    <label translate="true">Mailchimp</label>
+                </settings>
+            </action>
+        </massaction>
+    </listingToolbar>
+</listing>

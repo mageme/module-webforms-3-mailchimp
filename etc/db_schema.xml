@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * MageMe
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the MageMe.com license that is
+ * available through the world-wide-web at this URL:
+ * https://mageme.com/license
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade this extension to a newer
+ * version in the future.
+ *
+ * Copyright (c) MageMe (https://mageme.com)
+ **/
+-->
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+
+    <table name="mm_webforms_form" resource="default" engine="innodb">
+        <!-- Mailchimp Settings -->
+        <column xsi:type="boolean" name="is_mailchimp_enabled" nullable="false" default="0" comment="Mailchimp Integration Enabled"/>
+        <column xsi:type="int" name="mailchimp_email_field_id" unsigned="true" nullable="true" comment="Mailchimp Email Override"/>
+        <column xsi:type="text" name="mailchimp_map_fields_serialized" nullable="true" comment="Mailchimp Map Fields in JSON"/>
+        <column xsi:type="text" name="mailchimp_tags_serialized" nullable="true" comment="Mailchimp Tags in JSON"/>
+    </table>
+
+</schema>

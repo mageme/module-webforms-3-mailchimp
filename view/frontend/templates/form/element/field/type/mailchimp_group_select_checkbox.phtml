@@ -1,0 +1,55 @@
+<?php
+/**
+ * @var SelectCheckbox $block
+ */
+
+use MageMe\WebForms\Block\Form\Element\Field\Type\SelectCheckbox;
+use MageMe\WebForms\Block\Form\Element\Field\Tooltip;
+
+$validationRules = $block->getValidationRules();
+$validationDescriptions = $block->getValidationDescriptions();
+?>
+
+<div>
+    <?php
+    $options = $block->getFieldOptions();
+    foreach ($block->getFieldOptions() as $i => $option) {
+        if (!isset($option['value'], $option['label'])) {
+            continue;
+        }
+        ?>
+        <div class='field choice option-<?= $i ?>'
+             style='<?= $block->getFieldStyle() ?>'
+        >
+            <input id='<?= $block->getFieldId() . $i ?>'
+                   name='<?= $block->getFieldName() ?>'
+                   type='checkbox'
+                   value="<?= htmlspecialchars((string)$option['value']) ?>"
+                   class='checkbox'
+                <?php if ($validationRules) { ?>
+                    data-validate="{<?= implode(", ", $validationRules); ?>}"
+                <?php } ?>
+                <?php foreach ($validationDescriptions as $key => $data) {
+                    echo $key . '=' . '"' . $data . '"';
+                }
+                ?>
+                   aria-labelledby="<?= $block->getFieldId() . $i ?>_label<?php if(!$block->getIsLabelHidden()){?> label_<?= $block->getFieldId() ?><?php } ?>"
+                <?= htmlspecialchars((string)$block->getCustomAttributes()) ?>
+            />
+            <label id="<?= $block->getFieldId() . $i ?>_label"
+                   for='<?= $block->getFieldId() . $i ?>'
+                   class='<?= $block->getFieldClass() ?>'><?= $option['label'] ?></label>
+            <?php
+            $tooltip = $block->getField()->getTooltip($option['value']);
+            if ($tooltip) {
+                echo $block->getLayout()->createBlock(
+                    Tooltip::class,
+                    null
+                )->setField($block->getField())->setTooltip($tooltip)->toHtml();
+            }
+            ?>
+        </div>
+    <?php
+    }
+    ?>
+</div>
