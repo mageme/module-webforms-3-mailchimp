@@ -11,8 +11,7 @@
     },
     "require": {
         "mageme/module-webforms-3": ">=3.5.0",
-        "mailchimp/mc-magento2": ">=103.4.43",
-        "ext-json": "*"
+        "mailchimp/mc-magento2": ">=103.4.43"
     },
     "autoload": {
         "files": [
